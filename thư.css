@@ -1,0 +1,243 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient( #80EE98,#46DFB1,#09D1C7,#15919B,#0C6478,#213A58);
+    font-family: 'Arial', sans-serif;
+}
+
+.envelope {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: #ffffff;
+    border: 1px solid #ff0000;
+    border-radius: 10mm;
+    perspective: 1000px;
+    margin-bottom: 60px;
+    transition: transform 0.5s; /* Thêm hiệu ứng phóng to */
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #ffcccc;
+    border-bottom: 1px solid #ff0000;
+    transform-origin: top;
+    transition: transform 0.5s;
+    border-radius: 10mm;
+}
+
+.body {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #e0e0e0;
+    border-top: 2px solid #ff0000;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border-radius: 10mm;
+}
+
+.envelope.open {
+    transform: scale(1.2); /* Phóng to bức thư khi mở */
+}
+
+.envelope.open .flap {
+    transform: rotateX(-180deg);
+}
+
+.envelope.open .body {
+    opacity: 1;
+}
+
+h1 {
+    color: #ff0000;
+    height: 10px;
+    margin-top: -300px;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+h2 {
+    color: #2D2D2D;
+    height: 10px;
+}
+
+p {
+    color: #cf2fe4;
+    height: 10px;
+    font-size: 16px;
+    line-height: 17px;
+}
+
+button {
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+strong{
+    font-size: 25px;
+    color: #c51a53;
+    height: 1px;
+}
+.container{
+    margin-top: 150px;
+}
+.notification {
+    margin-top: 1px;
+    font-size: 18px;
+    color: #000000;
+    padding: 10px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    background-color: #ff0000;
+    display: none; /* Ẩn thông báo ban đầu */
+}
+
+.notification.visible {
+    margin-top: auto;
+    display: block; /* Hiện thông báo */
+}
+input{
+    border: 2px ;
+    padding: 16px;
+    border-radius: 4mm;
+}
+h3{
+    margin-top: -40px;
+}
+h4{
+    /* display: none;  Ẩn phần tử */
+     position: absolute;
+     top: 100;
+     margin-top: 400px;
+ }
+ .tree-container {
+    position: relative;
+    opacity: 0; /* Bắt đầu với độ mờ 0 */
+    animation: fadeIn 2s forwards; /* Hiệu ứng xuất hiện */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Độ mờ cuối cùng là 1 */
+    }
+}
+
+.tree {
+    position: relative;
+    text-align: center;
+}
+
+.star {
+    font-size: 30px;
+    position: absolute;
+    top: -30px; /* Đặt ngôi sao ở trên cùng */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.branch {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent; /* Cành cây trên cùng */
+    border-right: 30px solid transparent; /* Cành cây trên cùng */
+    border-bottom: 50px solid rgb(11, 240, 11); /* Màu xanh cho cành cây */
+    margin: 0 auto;
+}
+
+.level-2 {
+    border-left: 39px solid transparent; /* 30% lớn hơn */
+    border-right: 39px solid transparent; /* 30% lớn hơn */
+    border-bottom: 65px solid rgb(13, 218, 13); /* 30% lớn hơn */
+    margin-top: -40px; /* Điều chỉnh vị trí cho cành cây thứ 2 */
+}
+
+.level-3 {
+    border-left: 51px solid transparent; /* 30% lớn hơn */
+    border-right: 51px solid transparent; /* 30% lớn hơn */
+    border-bottom: 85px solid rgb(14, 199, 14); /* 30% lớn hơn */
+    margin-top: -50px; /* Điều chỉnh vị trí cho cành cây thứ 3 */
+}
+
+.level-4 {
+    border-left: 66px solid transparent; /* 30% lớn hơn */
+    border-right: 66px solid transparent; /* 30% lớn hơn */
+    border-bottom: 110px solid rgb(20, 182, 20); /* 30% lớn hơn */
+    margin-top: -80px; /* Điều chỉnh vị trí cho cành cây thứ 4 */
+}
+
+.level-5 {
+    border-left: 86px solid transparent; /* 30% lớn hơn */
+    border-right: 86px solid transparent; /* 30% lớn hơn */
+    border-bottom: 140px solid rgb(23, 202, 23); /* 30% lớn hơn */
+    margin-top: -90px; /* Điều chỉnh vị trí cho cành cây thứ 5 */
+}
+.level-6{
+    border-left: 110px solid transparent; /* 30% lớn hơn */
+    border-right: 110px solid transparent; /* 30% lớn hơn */
+    border-bottom: 160px solid rgb(26, 194, 26); /* 30% lớn hơn */
+    margin-top: -100px; /* Điều chỉnh vị trí cho cành cây thứ 5 */
+}
+.level-7{
+    border-left: 130px solid transparent; /* 30% lớn hơn */
+    border-right: 130px solid transparent; /* 30% lớn hơn */
+    border-bottom: 180px solid rgb(24, 175, 24); /* 30% lớn hơn */
+    margin-top: -128px; /* Điều chỉnh vị trí cho cành cây thứ 5 */
+}
+.level-8{
+    border-left: 150px solid transparent; /* 30% lớn hơn */
+    border-right: 150px solid transparent; /* 30% lớn hơn */
+    border-bottom: 200px solid rgb(22, 160, 22); /* 30% lớn hơn */
+    margin-top: -160px; /* Điều chỉnh vị trí cho cành cây thứ 5 */
+}
+.level-9{
+    border-left: 170px solid transparent; /* 30% lớn hơn */
+    border-right: 170px solid transparent; /* 30% lớn hơn */
+    border-bottom: 220px solid rgb(43, 163, 43); /* 30% lớn hơn */
+    margin-top: -180px; 
+}
+.level-10{
+    border-left: 190px solid transparent; /* 30% lớn hơn */
+    border-right: 190px solid transparent; /* 30% lớn hơn */
+    border-bottom: 240px solid rgb(26, 158, 26); /* 30% lớn hơn */
+    margin-top: -200px;
+}
+.level-11{
+    border-left: 210px solid transparent; /* 30% lớn hơn */
+    border-right: 210px solid transparent; /* 30% lớn hơn */
+    border-bottom: 260px solid rgb(29, 121, 29); /* 30% lớn hơn */
+    margin-top: -220px;
+}
+.trunk {
+    width: 20px;
+    height: 40px;
+    background-color: rgb(241, 83, 9); /* Màu nâu cho thân cây */
+    margin: 0 auto;
+}
+h5{
+    font-size: 30px;
+    margin-top: -110px;
+}

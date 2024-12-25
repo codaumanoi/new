@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Giáng Sinh</title>
+    <link rel="stylesheet" href="thư.css">
+    <span><link rel="stylesheet" href="tuyết rơi 1.css"></span>
+</head>
+<body>
+    <h5 id="chuc" style="display: none;">Chúc Mừng Giáng Sinh các bạn của tổ mong sắp tới thi cuối kì tốt nhé!</h5>
+    <div class="container" id="hopthoai">
+        <h2>Nhập mật khẩu của đế chế</h2>
+        <input type="text" id="inputWord" placeholder="Password" />
+        <button id="checkButton">Check var</button>
+        <p id="message"></p>
+    </div>
+    <div class="envelope" id="envelope">
+        <div class="flap"></div>
+        <div class="body">
+            <h1><marquee behavior="slide">Chúc Mừng Giáng Sinh!</marquee></h1>
+            <p><marquee behavior="slide">Gửi đến bạn những lời chúc tốt đẹp nhất trong<br> dịp Giáng Sinh này!</marquee></p>
+            <p>Hy vọng bạn sẽ có một mùa Giáng sinh ấm áp bên gia đình và bạn bè.</p>
+            <p>Thân ái,</p>
+            <p><strong>from team 4 with love</strong></p>
+        </div>
+    </div>
+    <h3><button id="openButton">Click me!</button></h3>
+    <h4><button id="toggleButton" style="display: none;">còn nữa</button></h4>
+    <form id="greetingForm">
+        <span><button type="submit" id="luuy">Lưu ý!</button></span>
+    </form>
+    <div id="notification" class="notification hidden">
+        <h4><button id="toggleButton">Hiện/Ẩn Nội Dung</button></h4>
+    </div>
+    <script src="tuyết rơi 1.js"></script>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <script src="thư.js"></script>
+        <div class="tree-container" id="caythong" style="display: none;">
+        <div class="tree">
+            <div class="star">⭐</div>
+            <div class="branch level-1"></div>
+            <div class="branch level-2"></div>
+            <div class="branch level-3"></div>
+            <div class="branch level-4"></div>
+            <div class="branch level-5"></div>
+            <div class="branch level-6"></div>
+            <div class="branch level-7"></div>
+            <div class="branch level-8"></div>
+            <div class="branch level-9"></div>
+            <div class="branch level-10"></div>
+            <div class="branch level-11"></div>
+            <div class="trunk"></div>
+        </div>
+        <audio id="backgroundMusic" autoplay loop>
+            <source src="đếm cừu.MP3" type="audio/mpeg">
+            Trình duyệt của bạn không hỗ trợ thẻ audio.
+        </audio>
+            <script>
+                // Kiểm tra xem âm thanh có thể phát tự động hay không
+                const audio = document.getElementById('backgroundMusic');
+                audio.volume = 0.5; // Điều chỉnh âm lượng (0.0 - 1.0)
+                document.getElementById('toggleButton').addEventListener('click', function() {
+                    // Ẩn tất cả các phần tử khác
+                    document.getElementById('envelope').style.display = 'none'; // Ẩn tiêu đề
+                    document.getElementById('hopthoai').style.display = 'none'; // Ẩn tiêu đề
+                    document.getElementById('luuy').style.display = 'none'; // Ẩn tiêu đề
+                    this.style.display = 'none'; // Ẩn nút
+        
+                    // Hiện cây thông
+                    const tree = document.getElementById('chuc');
+                    tree.style.display = 'block'; // Hiện cây thông
+                });
+            </script>
+    </div>
+
+</body>
+</html>
